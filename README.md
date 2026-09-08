@@ -4,10 +4,10 @@ Lost and Found FSC Project App
 Team Members
 - Henri Pothier
 - Isaac Temitope Abolarinwa 
-- Makido Scott
 - Matthew Quintanilla
-- -Miguel Ventura
+- Miguel Ventura
 - Fatima Manzar
+- Shatlyn Henriquez
 
 Proposed Project Idea
 - Lost and Found
