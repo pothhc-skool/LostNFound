@@ -1,4 +1,4 @@
-# LostNFound
+# LostNFound 
 Lost and Found FSC Project App
 
 Team Members
@@ -11,7 +11,7 @@ Team Members
 
 Proposed Project Idea
 - Lost and Found
-  FSC L&F is a centralized campus application that helps students, staff, and faculty report, search for, and recover lost items within the campus using an A.I development
+  FSC L&F is a centralized campus application that is held specifically for Farmingdale State College that helps students, staff, and faculty report, search for, and recover lost items within the campus using an A.I development
 
   Epics:
 1. Report a lost item with descriptions of said items, with specific descriptions based on item category (Electronics, phones, clothing, school supplies, keys, ID Cards, etc.)
