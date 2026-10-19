@@ -20,7 +20,7 @@ Proposed Project Idea
 4. Hold a weekly notification post of a lost item that has remained lost for a significant amount of time (Push notification would note an item lost approximately 8 months ago)
 5. Location based item reporting
 
-Prototype
+##Prototype
 
 View the FSC L&F Prototype on Figma: [Sprint 1](https://www.figma.com/design/y0RLHV7CkEecTQxfpCZyuc/Sprint-1?node-id=0-1&t=WWqzANalACrKRzbF-1)
 
