@@ -41,3 +41,76 @@ Integration tests check that separate parts of the site all work together.
 Report submissions and database are an example in which the moment a form is submitted it appears on the students account and gives it to the ai to find possible matches.
 Claims and campus security can see students forms or claiming items that are theirs which appear in their list of ai matches.
 User accounts and permissions are separate so a student cannot see other forms or see every listing of any item on the site.
+
+## Application Architecture
+
+### Architecture Overview
+
+The Lost & Found application uses a **client-server architecture** organized into three primary layers: the Presentation Layer, Application Layer, and Data Layer. This structure separates the user interface from the backend processing and database, making the application easier to maintain, expand, and secure.
+
+### 1. Presentation Layer (Frontend)
+
+The presentation layer is the interface students interact with when using the application. The frontend design is represented by our Figma prototype.
+
+Users can:
+- Create an account and log in.
+- Report lost or found items.
+- Upload pictures and descriptions of items.
+- Search and browse reported items.
+- View potential matches.
+- Submit claims for items they believe belong to them.
+
+The frontend communicates with the backend consistently on features such as these.
+
+### 2. Application Layer (Backend)
+
+The application layer handles the main business logic and processes requests received from the frontend.
+
+Its responsibilities include:
+- **User Authentication:** Managing user accounts and login verification.
+- **Item Management:** Creating, updating, retrieving, and removing lost or found item reports.
+- **Item Matching:** Comparing lost and found reports based on descriptions, categories, locations, and dates.
+- **Claim Verification:** Processing ownership claims and supporting verification before an item is returned.
+- **Notifications:** Alerting users when potential matches are identified.
+
+The backend acts as the intermediary between the frontend and the database, ensuring that data is processed securely.
+
+### 3. Data Layer (Database)
+
+The data layer stores and manages the information required for the application to function.
+
+A relational database such as this could store:
+
+- **Users:** User IDs, names, email addresses, and authentication information.
+- **Lost Items:** Item descriptions, categories, locations, dates, and report status.
+- **Found Items:** Information about recovered items and their current status.
+- **Claims:** Ownership requests, verification status, and associated users.
+- **Notifications:** Alerts generated for users when potential matches are discovered.
+
+Images could be stored separately in with their references maintained in the database.
+
+### 4. Communication and Data Flow
+
+The application follows a client-server communication model:
+
+1. A student interacts with the Lost & Found application.
+2. The frontend sends an HTTP request to the backend REST API.
+3. The backend validates the request and performs the necessary operations.
+4. The backend retrieves or updates information in the database.
+5. The backend sends a response to the frontend.
+6. The application displays the updated information to the student.
+
+### 5. Security and Scalability
+
+The proposed architecture includes several security considerations such as HTTPS communication, input validation, and role-based access control.
+
+Separating the frontend, backend, and database also allows individual components to be maintained and expanded without redesigning the entire application.
+
+### 6. Architecture Design Decision
+
+A layered client-server architecture was selected because it provides a clear separation of responsibilities while remaining practical for a student software engineering project. It allows the development team to work on the frontend, backend, and database independently.
+
+The main tradeoff is increased complexity compared with a simple application that combines all functionality into one component. However, the layered structure provides better maintainability, security, and flexibility as the Lost & Found application grows.
+
+**Current Development Status:** The user interface has been designed in Figma. The backend, database, and API components described above represent the proposed implementation architecture.
+
