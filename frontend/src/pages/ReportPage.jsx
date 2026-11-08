@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { INITIAL_REPORT, REPORT_CATEGORIES, REPORT_FIELDS } from '../data/reportFields'
 import './ReportPage.css'
+import { isValidIncidentDate } from '../utils/reportValidation'
 
 const CAMPUS_LOCATIONS = ['Campus Center', 'Greenley Library', 'Whitman Hall', 'Hale Hall', 'Lupton Hall', 'Nold Hall', 'Other / Unsure']
 
@@ -18,13 +19,19 @@ const update = (name, value) => { setValues(previous => ({ ...previous, [name]: 
 }
   const inputProps = name => ({ name: REPORT_FIELDS[name], value: values[name], onChange: event => update(name, event.target.value) })
 
-  function submit(event) {
+function submit(event) {
   event.preventDefault()
+
+  if (!isValidIncidentDate(values.incidentDate)) {
+    window.alert('Please enter a valid date that is not in the future.')
+    return
+  }
 
   if (event.currentTarget.reportValidity()) {
     onNavigate('report-confirmation')
   }
 }
+
 
   return <div className="report-page">
     <header className="report-header"><div><p className="report-kicker">FSC LOST &amp; FOUND · FRONTEND DEMO</p><h1>Lost and Found Report</h1><p>Choose whether you are reporting a lost item or a found item, then provide as much information as possible.</p></div><div className="report-header-side"><span>○ No reports submitted</span><span className="report-user">JD &nbsp; Demo user</span></div></header>
@@ -70,4 +77,5 @@ const update = (name, value) => { setValues(previous => ({ ...previous, [name]: 
     <p className="report-disclaimer">Frontend prototype only. No student data, reports, files, or locations are stored or sent to a server.</p>
     {onNavigate && <button type="button" className="report-back" onClick={() => onNavigate('my-account')}>← Back to My Account</button>}
   </div>
+
 }
