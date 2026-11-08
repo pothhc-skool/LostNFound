@@ -31,6 +31,9 @@
 .signin-submit { min-height:60px; border:0; border-radius:6px; background:#5db38e; color:#173b2e; font-weight:700; font-size:17px; transition:background .2s ease; }
 .signin-submit:hover { background:#4ba780; }
 .signin-notice { margin:-5px 0 0; background:#f1f8f4; color:#285e49; border:1px solid #b6ddc7; border-radius:8px; padding:12px 14px; line-height:1.5; font-size:14px; }
+.signin-hint { margin:6px 0 0; color:#6b827a; font-size:13px; line-height:1.4; }
+.signin-error { margin:6px 0 0; color:#b42318; font-size:14px; line-height:1.4; }
+.signin-input-wrap:has(input[aria-invalid="true"]) { border-color:#b42318; }
 .signin-back { display:flex; align-items:center; justify-content:center; gap:14px; margin:29px auto 25px; }
 .signin-back span { font-size:24px; line-height:1; font-weight:400; }
 .signin-footer-logo { display:block; width:176px; max-width:65%; height:auto; max-height:95px; object-fit:contain; margin:0 auto; }
