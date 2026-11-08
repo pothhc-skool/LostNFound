@@ -35,3 +35,17 @@ export const AUTH_ROLES = Object.freeze({
   STUDENT: 'student',
   CAMPUS_SECURITY: 'campusSecurity',
 })
+
+/** Page 3 dashboard API contract DRAFT (not implemented). */
+export const ACCOUNT_FIELD_NAMES = Object.freeze({
+  ACCOUNT_ID: 'accountId',
+  DISPLAY_NAME: 'displayName',
+  EMAIL: 'email',
+  STUDENT_ID_LAST4: 'studentIdLast4', // backend should send ONLY last four digits
+  REPORT_ID: 'reportId',
+  REPORT_STATUS: 'reportStatus',
+  ARCHIVE_SEMESTER: 'archiveSemester',
+  POSSIBLE_MATCHES: 'possibleMatches',
+  MATCH_SCORE: 'matchScore', // 0..100, supplied by backend matching service
+  CLAIM_PENDING: 'claimPending',
+})

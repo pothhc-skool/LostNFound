@@ -4,6 +4,7 @@ import Icon from './components/Icon'
 import HomePage from './pages/HomePage'
 import SignInPage from './pages/SignInPage'
 import PlaceholderPage from './pages/PlaceholderPage'
+import AccountPage from "./pages/AccountPage";
 import './styles/tokens.css'
 import './App.css'
 
@@ -34,7 +35,15 @@ export default function App() {
     <Sidebar open={menuOpen} onNavigate={navigate} activePage={activePage} onClose={() => setMenuOpen(false)} />
     <main className="main-area">
       <button className="menu-toggle" aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'} aria-expanded={menuOpen} aria-controls="app-navigation" onClick={() => setMenuOpen(current => !current)}><Icon name={menuOpen ? 'close' : 'menu'} size={24}/></button>
-      {activePage === 'home' ? <HomePage onNavigate={navigate}/> : activePage === 'sign-in' ? <SignInPage onNavigate={navigate}/> : <PlaceholderPage page={activePage} onNavigate={navigate} />}
+      {activePage === 'home' ? (
+  <HomePage onNavigate={navigate} />
+) : activePage === 'sign-in' ? (
+  <SignInPage onNavigate={navigate} />
+) : activePage === 'my-account' ? (
+  <AccountPage onNavigate={navigate} />
+) : (
+  <PlaceholderPage page={activePage} onNavigate={navigate} />
+)}
     </main>
   </div>
 }

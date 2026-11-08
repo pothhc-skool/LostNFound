@@ -16,11 +16,13 @@ export default function SignInPage({ onNavigate }) {
   const [rememberMe, setRememberMe] = useState(false)
   const [notice, setNotice] = useState('')
 
-  function handleSubmit(event) {
-    event.preventDefault()
-    // No credential request or storage until authentication integration exists.
-    setNotice('Sign-in is not connected yet. This page is a frontend preview; no credentials were submitted.')
-  }
+function handleSubmit(event) {
+  event.preventDefault()
+
+  setNotice(
+    'Authentication is not connected yet. Use Demo Account to preview the dashboard.'
+  )
+}
 
   return (
     <section className="signin-page" aria-labelledby="signin-heading">
@@ -70,6 +72,13 @@ export default function SignInPage({ onNavigate }) {
           </div>
 
           <button className="signin-submit" type="submit">Sign In</button>
+          <button
+  className="signin-back"
+  type="button"
+  onClick={() => onNavigate('my-account')}
+>
+  View Demo Account →
+</button>
           {notice && <p className="signin-notice" role="status">{notice}</p>}
         </form>
 
