@@ -7,6 +7,7 @@ import PlaceholderPage from './pages/PlaceholderPage'
 import AccountPage from "./pages/AccountPage";
 import './styles/tokens.css'
 import './App.css'
+import ReportPage from './pages/ReportPage'
 
 const knownPages = new Set(NAV_ITEMS.map(item => item.key))
 function readPage() {
@@ -41,9 +42,15 @@ export default function App() {
   <SignInPage onNavigate={navigate} />
 ) : activePage === 'my-account' ? (
   <AccountPage onNavigate={navigate} />
+) : activePage === 'forms' ? (
+  <ReportPage onNavigate={navigate} />
 ) : (
   <PlaceholderPage page={activePage} onNavigate={navigate} />
 )}
     </main>
   </div>
+
+
+
+
 }
