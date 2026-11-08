@@ -88,7 +88,7 @@ export default function AccountPage({onNavigate}) {
   function saveProfile(e){e.preventDefault(); if(profileDraft.trim()){setProfile(p=>({...p,name:profileDraft.trim()}));setProfileEditing(false)}}
 
   return <section className="account-page page-card" aria-labelledby="account-title">
-    <header className="account-page-top"><div><p className="account-demo-label">DEMO DATA — NOT A SIGNED-IN ACCOUNT</p><h1 id="account-title">My Account</h1></div><button className="account-button-dark" type="button" onClick={()=>onNavigate('forms')}>Create new</button></header>
+   <header className="account-page-top"><div><p className="account-demo-label">DEMO DATA — NOT A SIGNED-IN ACCOUNT</p><h1 id="account-title">My Account</h1></div><div><button className="account-button-dark" type="button" onClick={()=>onNavigate('forms')}>Create new</button><button className="account-button-secondary" type="button" onClick={()=>onNavigate('logout')}>Logout</button></div></header>
     <div className="account-profile">
       <span className="account-avatar" aria-hidden="true">{initials(profile.name)}</span>
       <div className="account-profile-info"><strong>{profile.name}</strong><span>{profile.email}</span><span>Student ID •••• {profile.studentIdLast4}</span></div>
