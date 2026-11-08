@@ -22,3 +22,16 @@ export const ITEM_CATEGORIES = Object.freeze([
 ])
 
 export const REPORT_TYPES = Object.freeze(['lost', 'found'])
+
+/** Page 2 draft authentication field registry — names to keep consistent with future API work. */
+export const AUTH_FIELD_NAMES = Object.freeze({
+  ROLE: 'role',
+  EMAIL: 'email',
+  PASSWORD: 'password',
+  REMEMBER_ME: 'rememberMe',
+})
+
+export const AUTH_ROLES = Object.freeze({
+  STUDENT: 'student',
+  CAMPUS_SECURITY: 'campusSecurity',
+})
