@@ -14,10 +14,18 @@ function Section({ title, subtitle, children }) {
 /** Page 4: UI prototype only. Never treat this form as a saved report. */
 export default function ReportPage({ onNavigate }) {
   const [values, setValues] = useState(INITIAL_REPORT)
-  const [preview, setPreview] = useState(false)
-  const update = (name, value) => { setValues(previous => ({ ...previous, [name]: value })); setPreview(false) }
+const update = (name, value) => { setValues(previous => ({ ...previous, [name]: value  }))
+}
   const inputProps = name => ({ name: REPORT_FIELDS[name], value: values[name], onChange: event => update(name, event.target.value) })
-  function submit(event) { event.preventDefault(); if (event.currentTarget.reportValidity()) setPreview(true) }
+
+  function submit(event) {
+  event.preventDefault()
+
+  if (event.currentTarget.reportValidity()) {
+    onNavigate('report-confirmation')
+  }
+}
+
   return <div className="report-page">
     <header className="report-header"><div><p className="report-kicker">FSC LOST &amp; FOUND · FRONTEND DEMO</p><h1>Lost and Found Report</h1><p>Choose whether you are reporting a lost item or a found item, then provide as much information as possible.</p></div><div className="report-header-side"><span>○ No reports submitted</span><span className="report-user">JD &nbsp; Demo user</span></div></header>
     <form onSubmit={submit} className="report-grid">
@@ -55,9 +63,8 @@ export default function ReportPage({ onNavigate }) {
         <Section title="Lost and Found Liability Notice">
           <p className="report-liability">FSC Lost &amp; Found cannot guarantee recovery or return of lost items. Item condition and descriptions cannot be guaranteed. This draft notice requires institutional/legal approval before production use.</p>
           <label className="report-check"><input type="checkbox" name={REPORT_FIELDS.liabilityAccepted} checked={values.liabilityAccepted} onChange={e => update('liabilityAccepted', e.target.checked)} required /><span>I acknowledge the notice above.</span></label>
-          <button className="report-submit" type="submit">Preview report <span aria-hidden="true">→</span></button>
-          {preview && <div className="report-preview" role="status"><strong>Demo validation successful.</strong><p>Your {values.reportType} item report for “{values.itemName}” is ready for future backend submission. Nothing was saved or transmitted.</p><button type="button" onClick={() => setPreview(false)}>Continue editing</button></div>}
-        </Section>
+          <button className="report-submit" type="submit"> Continue to confirmation preview <span aria-hidden="true">→</span> </button>
+          </Section>
       </div>
     </form>
     <p className="report-disclaimer">Frontend prototype only. No student data, reports, files, or locations are stored or sent to a server.</p>

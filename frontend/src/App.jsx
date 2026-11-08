@@ -8,8 +8,13 @@ import AccountPage from "./pages/AccountPage";
 import './styles/tokens.css'
 import './App.css'
 import ReportPage from './pages/ReportPage'
+import ReportConfirmationPage from './pages/ReportConfirmationPage'
 
-const knownPages = new Set(NAV_ITEMS.map(item => item.key))
+const knownPages = new Set([
+  ...NAV_ITEMS.map(item => item.key),
+  'report-confirmation',
+])
+
 function readPage() {
   const candidate = window.location.hash.replace(/^#\/?/, '')
   return knownPages.has(candidate) ? candidate : 'home'
@@ -44,6 +49,8 @@ export default function App() {
   <AccountPage onNavigate={navigate} />
 ) : activePage === 'forms' ? (
   <ReportPage onNavigate={navigate} />
+) : activePage === 'report-confirmation' ? (
+  <ReportConfirmationPage onNavigate={navigate} />
 ) : (
   <PlaceholderPage page={activePage} onNavigate={navigate} />
 )}
