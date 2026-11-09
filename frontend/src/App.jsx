@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import Sidebar, { NAV_ITEMS } from './components/Sidebar'
+import { useState, useEffect } from 'react';
+import Sidebar from "./components/Sidebar";
+import { NAV_ITEMS } from "./components/navItems";
 import Icon from './components/Icon'
 import HomePage from './pages/HomePage'
 import SignInPage from './pages/SignInPage'

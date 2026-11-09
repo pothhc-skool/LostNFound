@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import { useState } from 'react';
 import { INITIAL_REPORT, REPORT_CATEGORIES, REPORT_FIELDS } from '../data/reportFields'
 import './ReportPage.css'
 
 const CAMPUS_LOCATIONS = ['Campus Center', 'Greenley Library', 'Whitman Hall', 'Hale Hall', 'Lupton Hall', 'Nold Hall', 'Other / Unsure']
 
-function Field({ label, name, children, help }) {
+function Field({ label, children, help }) {
   return <label className="report-field"><span>{label}</span>{children}{help && <small>{help}</small>}</label>
 }
 function Section({ title, subtitle, children }) {
