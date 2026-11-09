@@ -26,6 +26,7 @@ export const REPORT_TYPES = Object.freeze(['lost', 'found'])
 /** Page 2 draft authentication field registry — names to keep consistent with future API work. */
 export const AUTH_FIELD_NAMES = Object.freeze({
   ROLE: 'role',
+  LOGIN_ID: 'loginId', // RAM ID (students) or @farmingdale.edu email
   EMAIL: 'email',
   PASSWORD: 'password',
   REMEMBER_ME: 'rememberMe',
