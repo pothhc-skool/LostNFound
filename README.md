@@ -114,3 +114,88 @@ The main tradeoff is increased complexity compared with a simple application tha
 
 **Current Development Status:** The user interface has been designed in Figma. The backend, database, and API components described above represent the proposed implementation architecture.
 
+## Project Set up Instructions
+The FSC Lost and Found project is a web application built using React, Vite, JavaScript, HTML, and CSS. Follow the steps below to set up and run the project on your computer.
+
+Before running the project, make sure you have the following installed:
+
+Git
+Node.js
+Visual Studio Code 
+
+
+### Steps to Run the Project
+
+1. Clone the GitHub repository:
+   git clone https://github.com/pothhc-skool/LostNFound.git
+
+2. Open the project folder
+   cd LostNFound
+
+3. Open the frontend folder:
+   cd  frontend
+
+4. Install the required dependencies:
+   npm run dev
+
+5. Start the website:
+   npm run dev
+
+6. Open the local address shown in the terminal, usually http://localhost:5173/, to view the website.
+
+To stop the website, press Ctrl + C in the terminal.
+For more detailed setup instructions and troubleshooting, refer to the README file inside the frontend folder.
+
+## CI/CD Pipeline
+
+Our team uses GitHub Actions to automatically check code changes before they are added to the main branch.
+
+The workflow is called "Test" and runs when changes are submitted through pull requests. It also runs when code is pushed to the main branch.
+
+The workflow helps us find problems early and make sure the code is working correctly.
+
+We checked the GitHub Actions page and confirmed that the recent workflow runs completed successfully.
+
+## Branch Protection
+
+Our team uses GitHub branch protection to keep the main branch secure and prevent unwanted changes.
+
+The following rules are enabled:
+
+1. Team members must create a pull request before merging changes into main.
+2. At least one teammate must review and approve the pull request.
+3. The GitHub Actions "Test" check must pass before merging.
+4. Force pushes are blocked to protect the project's history.
+5. Branch deletion is restricted to prevent accidental removal.
+
+These rules help our team catch mistakes, review each other's work, and keep the main branch organized.
+
+## Testing and Deployment
+
+Our team uses GitHub Actions and Vitest to automatically test the application.
+The tests help us check that the code is working correctly before changes are merged into the main branch.
+The latest successful workflow run showed that all 53 tests passed across 2 test files.
+GitHub Actions runs the tests when pull requests are submitted, and the main branch requires a passing Test check before merging.
+
+## Sprint 2 Development Progress
+
+During Sprint 2, our team worked on building the basic structure of the FSC Lost and Found website.
+We created the main pages so users can sign in, submit lost or found item reports, and receive confirmation after submitting a report.
+We also worked on connecting different pages and fixing coding errors that came up during development.
+Each team member worked on their assigned user story, and we used GitHub pull requests to review changes before adding them to the main branch.
+Some features are still being developed, but the basic structure of the website is now in place.
+
+## AI Use Documentation
+
+Our team used AI tools such as ChatGPT, Claude, and GitHub Copilot to help with coding, testing, fixing errors, and writing documentation during Sprint 2.
+
+1) ChatGPT helped with implementing incident date validation using JavaScript and setting up automated testing with Vitest. It also suggested five test cases to check valid and invalid dates.
+2) Claude and GitHub Copilot were used to help with coding and setting up project permissions.
+3) AI tools were also used to troubleshoot coding problems during development.
+
+## AI Mistakes and Corrections
+
+During development, some AI-assisted work needed corrections.
+
+1)An extra closing bracket caused a syntax error that stopped the React application from loading. The error was identified and fixed by removing the bracket.
+2) A merge conflict happened when another team member updated the testing configuration. The duplicate testing section was reviewed and the conflict was resolved through GitHub.
