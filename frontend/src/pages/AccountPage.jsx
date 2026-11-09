@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import { useState, useMemo } from 'react';
 import { DEMO_ACCOUNT, DEMO_REPORTS, REPORT_STAGES } from '../data/accountDemoData'
 import './AccountPage.css'
 

@@ -1,4 +1,3 @@
-import React from 'react'
 
 const paths = {
   menu: <><path d="M4 7h16M4 12h16M4 17h16" /></>,

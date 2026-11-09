@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import Icon from '../components/Icon'
 import { AUTH_FIELD_NAMES, AUTH_ROLES } from '../data/fieldDefinitions'
 import { validateLoginId, validateSignIn } from '../auth/fscEmail'
