@@ -13,7 +13,12 @@ export const REPORT_STAGES = [
 
 // AI scores are illustrative SAMPLE VALUES, NOT AI-produced results.
 export const DEMO_REPORTS = [
-  { id:'LF-101', title:'Black umbrella', category:'Accessories', type:'lost', location:'Student Union', reportedAt:'2026-10-18', description:'Compact black umbrella with curved handle.', status:'possible_match', archiveSemester:null, possibleMatches:[{id:'MATCH-01', matchScore:87, explanation:'Sample score only — not evaluated by AI.'}], claimPending:false },
+  { id:'LF-101', title:'Black smartphone', category:'Electronics', type:'lost', location:'Student Union', reportedAt:'2026-10-18', description:'Black smartphone in a dark protective case.', status:'possible_match', archiveSemester:null, possibleMatches:[{id:'MATCH-01', matchScore:87, explanation:'Sample score only — not evaluated by AI.', item:{title:'Black smartphone',category:'Electronics',type:'found',location:'Student Union entrance',reportedAt:'2026-10-19',description:'Black smartphone in a protective case.'}, securityCheck:[
+    { id:'screen-detail', prompt:'What image or content was visible on the screen?', answer:'a sunset photo' },
+    { id:'damage-detail', prompt:'Describe a specific deformity or mark on the device.', answer:'small crack in the upper-left corner' },
+    { id:'device-quirk', prompt:'What unusual behavior or quirk did the device have?', answer:'the volume-down button sticks' },
+    { id:'case-detail', prompt:'What distinctive detail is on the case or an attached accessory?', answer:'a worn yellow star sticker' },
+  ]}], claimPending:false },
   { id:'LF-102', title:'Calculus textbook', category:'Books', type:'lost', location:'Whitman Hall', reportedAt:'2026-10-17', description:'Calculus textbook with a blue bookmark.', status:'reported', archiveSemester:null, possibleMatches:[], claimPending:false },
   { id:'LF-103', title:'Student ID wallet', category:'Wallets & IDs', type:'found', location:'Campus Center', reportedAt:'2026-10-16', description:'Black wallet found near the campus center.', status:'under_verification', archiveSemester:null, possibleMatches:[], claimPending:true },
   { id:'LF-080', title:'Wireless headphones', category:'Electronics', type:'lost', location:'Library', reportedAt:'2026-09-12', description:'Wireless earbuds in black charging case.', status:'returned', archiveSemester:null, possibleMatches:[], claimPending:false },

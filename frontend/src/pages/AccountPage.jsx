@@ -98,6 +98,7 @@ export default function AccountPage({onNavigate}) {
     <div className="account-metrics" aria-label="Report summary">
       {[["Active reports",metrics.active],["Possible matches",metrics.possible],["Claims in progress",metrics.claims],["Items recovered",metrics.recovered]].map(([label,n])=><div className="account-metric" key={label}><span>{label}</span><strong>{n}</strong></div>)}
     </div>
+    {metrics.possible > 0 && <button className="account-button-primary" type="button" onClick={()=>onNavigate('possible-matches')}>Review possible matches ({metrics.possible})</button>}
     <section className="account-report-section" aria-labelledby="active-report-title">
       <div className="account-section-heading"><h2 id="active-report-title">Active reports</h2><span>{activeReports.length} open</span></div>
       <div className="account-report-list">{activeReports.length ? activeReports.map(report=><ReportCard key={report.id} report={report} onChange={editReport}/>) : <p className="account-empty">No active reports. Create one to get started.</p>}</div>

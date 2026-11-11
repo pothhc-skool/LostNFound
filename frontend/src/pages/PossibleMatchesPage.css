@@ -1,0 +1,46 @@
+.matches-page { padding: 22px; }
+.matches-page-header { display:flex; align-items:center; justify-content:space-between; gap:16px; border-bottom:1px solid var(--border); padding-bottom:16px; }
+.matches-page-header h1 { margin:0; font-size:clamp(23px,2.4vw,31px); letter-spacing:-.4px; }
+.matches-page-header p:last-child { margin:6px 0 0; color:var(--muted); font-size:14px; }
+.matches-demo-label { margin:0 0 4px; color:#419f7c; font-size:10px; font-weight:800; letter-spacing:1px; }
+.matches-back-button { flex:none; border:1px solid var(--border); border-radius:9px; padding:10px 14px; background:#263838; color:#fff; font-size:13px; font-weight:700; }
+.matches-notice,.matches-footer { border-radius:9px; padding:12px; background:#f0f6f2; color:#52675e; font-size:12px; line-height:1.55; }
+.match-card { margin:16px 0; overflow:hidden; border:1px solid var(--border); border-radius:14px; background:#fff; }
+.match-card-header { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px; background:#f8faf9; }
+.match-reference { color:#71807a; font-size:11px; font-weight:700; }
+.match-card-header h2 { margin:3px 0 0; font-size:19px; }
+.match-score { display:grid; justify-items:center; min-width:78px; border:1px solid #b9ddce; border-radius:12px; padding:8px; background:#e7f2ed; color:#2b6e54; }
+.match-score strong { font-size:21px; line-height:1.1; }
+.match-score span { margin-top:3px; font-size:10px; }
+.match-comparison { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; padding:14px; }
+.match-item { min-width:0; border:1px solid var(--border); border-radius:11px; padding:13px; }
+.match-item--found { background:#f8faf9; }
+.match-item-label { margin:0 0 7px; color:#63716c; font-size:11px; font-weight:750; text-transform:uppercase; letter-spacing:.45px; }
+.match-item h3 { margin:0 0 12px; font-size:16px; }
+.match-item dl { display:grid; gap:9px; margin:0; }
+.match-item dl div { display:grid; grid-template-columns:90px minmax(0,1fr); gap:8px; font-size:12px; line-height:1.45; }
+.match-item dt { color:#71807a; font-weight:700; }
+.match-item dd { margin:0; overflow-wrap:anywhere; color:#354640; }
+.match-explanation { margin:0; border-top:1px solid var(--border); padding:12px 15px; color:#386d58; font-size:12px; }
+.match-questionnaire { border-top:1px solid var(--border); padding:16px; }
+.match-questionnaire-heading { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+.match-questionnaire-heading h3 { margin:0; font-size:16px; }
+.match-questionnaire-heading p { margin:4px 0 0; color:#63716c; font-size:12px; }
+.questionnaire-progress { color:#63716c; font-size:12px; white-space:nowrap; }
+.questionnaire-reset { border:1px solid var(--border); border-radius:8px; padding:8px 11px; background:#fff; color:#263838; font-size:12px; font-weight:700; }
+.questionnaire-form { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:14px; }
+.questionnaire-field { display:grid; align-content:start; gap:6px; color:#354640; font-size:12px; line-height:1.45; }
+.questionnaire-field input { width:100%; min-height:40px; border:1px solid #cbd9d3; border-radius:8px; padding:8px 10px; background:#fff; color:var(--text); font:inherit; }
+.questionnaire-submit { justify-self:start; align-self:end; border:1px solid var(--primary); border-radius:8px; padding:10px 14px; background:var(--primary); color:#102d26; font-size:13px; font-weight:750; }
+.questionnaire-result { grid-column:1/-1; margin-top:14px; border:1px solid #f3d7a5; border-radius:9px; padding:12px; background:#fff8e9; color:#704d17; font-size:13px; }
+.questionnaire-result--likely { border-color:#b9ddce; background:#eaf6ef; color:#2b6e54; }
+.questionnaire-result p { margin:6px 0 0; line-height:1.5; }
+.questionnaire-disclaimer { margin:10px 0 0; color:#71807a; font-size:11px; line-height:1.45; }
+.matches-empty { padding:18px; color:var(--muted); }
+.matches-footer { margin-top:18px; }
+@media(max-width:650px) {
+  .matches-page { padding:18px 14px; }
+  .matches-page-header { align-items:flex-start; flex-direction:column; }
+  .match-comparison { grid-template-columns:1fr; }
+  .questionnaire-form { grid-template-columns:1fr; }
+}
