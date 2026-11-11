@@ -4,6 +4,7 @@ import Icon from './Icon'
 export const NAV_ITEMS = [
   { key: 'home', label: 'Home', icon: 'home' },
   { key: 'search', label: 'Search', icon: 'search' },
+  { key: 'possible-matches', label: 'Possible Matches (Demo)', icon: 'search' },
   { key: 'forms', label: 'Forms', icon: 'forms' },
   { key: 'sign-in', label: 'Sign In', icon: 'signin' },
   { key: 'my-account', label: 'My Account (Demo)', icon: 'home' },

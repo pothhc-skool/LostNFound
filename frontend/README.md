@@ -9,6 +9,7 @@ The application provides a responsive interface for students and staff to naviga
 - Animated, collapsible navigation sidebar
 - FSC Lost & Found branding and logos
 - Forms and Sign In navigation
+- Demo possible-matches review with sample lost/found report details
 - Reusable React components and CSS styles
 - Placeholder pages for features under development
 
@@ -67,6 +68,8 @@ Open the local URL displayed in the terminal, typically:
 http://localhost:5173/
 
 The FSC Lost & Found homepage should now appear in your browser.
+
+The **Possible Matches (Demo)** view displays fixture data only. Its short-answer security check compares responses locally against sample details; responses are not saved or sent anywhere, and the check does not verify ownership. Because this is a frontend-only demo, its sample answer keys are not secure and can be inspected in the source/bundle. A production verification flow must keep private answer keys on the server and use staff review. It does not run AI matching, connect to a backend, or represent real item reports.
 
 ### 6. Stop the Server
 

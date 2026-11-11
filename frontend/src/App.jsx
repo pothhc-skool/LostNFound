@@ -9,6 +9,7 @@ import './styles/tokens.css'
 import './App.css'
 import ReportPage from './pages/ReportPage'
 import ReportConfirmationPage from './pages/ReportConfirmationPage'
+import PossibleMatchesPage from './pages/PossibleMatchesPage'
 
 const knownPages = new Set([
   ...NAV_ITEMS.map(item => item.key),
@@ -51,6 +52,8 @@ export default function App() {
   <ReportPage onNavigate={navigate} />
 ) : activePage === 'report-confirmation' ? (
   <ReportConfirmationPage onNavigate={navigate} />
+) : activePage === 'possible-matches' ? (
+  <PossibleMatchesPage onNavigate={navigate} />
 ) : (
   <PlaceholderPage page={activePage} onNavigate={navigate} />
 )}
